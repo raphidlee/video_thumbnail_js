@@ -16,12 +16,14 @@ just use video.thumbnail.js
 
 ```
 var videoLoader = new VideoThumbnail('/test.mp3');
-    videoLoader.generate().then(function(data){
-        console.log(data); // this 'data' contains image/base64
 
-        var blob = videoLoader.getAsBlob(); // you can get BLOB Object with getAsBlob() function.
-        console.log(blob);
-    });
+videoLoader.generate()
+            .then(function(data){
+                console.log(data); // this 'data' contains image/base64
+
+                var blob = videoLoader.getAsBlob(); // you can get BLOB Object with getAsBlob() function.
+                console.log(blob);
+            });
 
 
 ```
