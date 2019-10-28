@@ -12,7 +12,19 @@ Generates screen-shots from video file via HTML Elements
 
 just use video.thumbnail.js
 
-### Installing
+### Example
+
+```
+var videoLoader = new VideoThumbnail('/test.mp3');
+    videoLoader.generate().then(function(data){
+        console.log(data); // this 'data' contains image/base64
+
+        var blob = videoLoader.getAsBlob(); // you can get BLOB Object with getAsBlob() function.
+        console.log(blob);
+    });
+
+
+```
 
 ## Running the tests
 
