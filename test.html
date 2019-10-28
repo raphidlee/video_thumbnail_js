@@ -1,0 +1,16 @@
+<script src="video.thumbnail.js"></script>
+<script>
+    var test = function(){
+
+        let testPath = "/home/yidonguk/Desktop/SampleVideo_1280x720_1mb.mp4";
+        testPath = "SampleVideo_1280x720_1mb.mp4";
+        var videoLoader = new VideoThumbnail(testPath);
+        videoLoader.generate().then(function(data){
+            console.log(data);
+            console.log(videoLoader.getAsBlob());
+        });
+    };
+
+
+</script>
+<button onclick="test();">test</button>
